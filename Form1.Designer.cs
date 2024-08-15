@@ -34,11 +34,14 @@
             this.LvOneFarmInfoText = new System.Windows.Forms.TextBox();
             this.CoinBalance = new System.Windows.Forms.TextBox();
             this.UpgradeLvOneFarm = new System.Windows.Forms.Button();
+            this.AutoFarmUpgrade = new System.Windows.Forms.Button();
+            this.AutoFarmProgrssBar = new System.Windows.Forms.ProgressBar();
+            this.ShowAutoFarmIntervall = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // MainClick
             // 
-            this.MainClick.Location = new System.Drawing.Point(392, 614);
+            this.MainClick.Location = new System.Drawing.Point(390, 614);
             this.MainClick.Name = "MainClick";
             this.MainClick.Size = new System.Drawing.Size(520, 33);
             this.MainClick.TabIndex = 0;
@@ -52,7 +55,7 @@
             this.LvOneFarmProgrssBar.Location = new System.Drawing.Point(24, 34);
             this.LvOneFarmProgrssBar.MarqueeAnimationSpeed = 1000;
             this.LvOneFarmProgrssBar.Name = "LvOneFarmProgrssBar";
-            this.LvOneFarmProgrssBar.Size = new System.Drawing.Size(100, 94);
+            this.LvOneFarmProgrssBar.Size = new System.Drawing.Size(187, 94);
             this.LvOneFarmProgrssBar.TabIndex = 1;
             // 
             // CollectCoins
@@ -60,7 +63,7 @@
             this.CollectCoins.BackColor = System.Drawing.Color.Salmon;
             this.CollectCoins.Location = new System.Drawing.Point(24, 134);
             this.CollectCoins.Name = "CollectCoins";
-            this.CollectCoins.Size = new System.Drawing.Size(100, 23);
+            this.CollectCoins.Size = new System.Drawing.Size(187, 23);
             this.CollectCoins.TabIndex = 2;
             this.CollectCoins.Text = "Collect";
             this.CollectCoins.UseVisualStyleBackColor = false;
@@ -71,7 +74,7 @@
             this.LvOneFarmInfoText.Location = new System.Drawing.Point(24, 8);
             this.LvOneFarmInfoText.Name = "LvOneFarmInfoText";
             this.LvOneFarmInfoText.ReadOnly = true;
-            this.LvOneFarmInfoText.Size = new System.Drawing.Size(100, 20);
+            this.LvOneFarmInfoText.Size = new System.Drawing.Size(187, 20);
             this.LvOneFarmInfoText.TabIndex = 3;
             this.LvOneFarmInfoText.Text = "+5 Coins";
             this.LvOneFarmInfoText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -89,17 +92,46 @@
             // 
             this.UpgradeLvOneFarm.Location = new System.Drawing.Point(24, 163);
             this.UpgradeLvOneFarm.Name = "UpgradeLvOneFarm";
-            this.UpgradeLvOneFarm.Size = new System.Drawing.Size(100, 23);
+            this.UpgradeLvOneFarm.Size = new System.Drawing.Size(187, 23);
             this.UpgradeLvOneFarm.TabIndex = 5;
             this.UpgradeLvOneFarm.Text = "Upgrade";
             this.UpgradeLvOneFarm.UseVisualStyleBackColor = true;
             this.UpgradeLvOneFarm.Click += new System.EventHandler(this.UpgradeLvOneFarm_Click);
+            // 
+            // AutoFarmUpgrade
+            // 
+            this.AutoFarmUpgrade.Location = new System.Drawing.Point(1022, 134);
+            this.AutoFarmUpgrade.Name = "AutoFarmUpgrade";
+            this.AutoFarmUpgrade.Size = new System.Drawing.Size(230, 23);
+            this.AutoFarmUpgrade.TabIndex = 6;
+            this.AutoFarmUpgrade.Text = "Auto Farm - 100 Coins";
+            this.AutoFarmUpgrade.UseVisualStyleBackColor = true;
+            this.AutoFarmUpgrade.Click += new System.EventHandler(this.AutoFarmUpgrade_Click);
+            // 
+            // AutoFarmProgrssBar
+            // 
+            this.AutoFarmProgrssBar.Enabled = false;
+            this.AutoFarmProgrssBar.Location = new System.Drawing.Point(1022, 34);
+            this.AutoFarmProgrssBar.Name = "AutoFarmProgrssBar";
+            this.AutoFarmProgrssBar.Size = new System.Drawing.Size(230, 94);
+            this.AutoFarmProgrssBar.TabIndex = 7;
+            // 
+            // ShowAutoFarmIntervall
+            // 
+            this.ShowAutoFarmIntervall.Location = new System.Drawing.Point(1022, 8);
+            this.ShowAutoFarmIntervall.Name = "ShowAutoFarmIntervall";
+            this.ShowAutoFarmIntervall.ReadOnly = true;
+            this.ShowAutoFarmIntervall.Size = new System.Drawing.Size(230, 20);
+            this.ShowAutoFarmIntervall.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.ShowAutoFarmIntervall);
+            this.Controls.Add(this.AutoFarmProgrssBar);
+            this.Controls.Add(this.AutoFarmUpgrade);
             this.Controls.Add(this.UpgradeLvOneFarm);
             this.Controls.Add(this.CoinBalance);
             this.Controls.Add(this.LvOneFarmInfoText);
@@ -121,6 +153,9 @@
         private System.Windows.Forms.TextBox LvOneFarmInfoText;
         private System.Windows.Forms.TextBox CoinBalance;
         private System.Windows.Forms.Button UpgradeLvOneFarm;
+        private System.Windows.Forms.Button AutoFarmUpgrade;
+        private System.Windows.Forms.ProgressBar AutoFarmProgrssBar;
+        private System.Windows.Forms.TextBox ShowAutoFarmIntervall;
     }
 }
 
